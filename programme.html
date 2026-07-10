@@ -10,11 +10,346 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="image/logo.jpeg" alt="logo">
 
+            <button>
+                <i class="bi bi-list"></i>
+            </button>
 
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Intervenants</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <button id="darkModeToggle">
+                            <i class="bi bi bi-moon-stars-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- ================= HERO INTERNE ================= -->
 
+<section class="hero-interne">
 
-    
+    <div class="hero-container">
+
+        <h1>Programme</h1>
+
+        <p class="prog">
+            <a href="index.html">Accueil</a>
+            <span>></span>
+            <span>Programme</span>
+        </p>
+
+    </div>
+
+</section>
+<!-- ================= PROGRAMME ================= -->
+
+<section class="programme">
+
+    <h2>Programme de la conférence</h2>
+
+    <!-- Onglets -->
+
+    <div class="tabs">
+
+        <button class="tab-btn active" data-day="day1">Jour 1</button>
+
+        <button class="tab-btn" data-day="day2">Jour 2</button>
+
+        <button class="tab-btn" data-day="day3">Jour 3</button>
+
+    </div>
+
+    <!-- JOUR 1 -->
+
+    <div class="tab-content active" id="day1">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>09:00</td>
+                    <td>Ouverture officielle</td>
+                    <td>Amina Diallo</td>
+                    <td>Salle A</td>
+                </tr>
+
+                <tr>
+                    <td>10:00</td>
+                    <td>Intelligence Artificielle</td>
+                    <td>Jean Koffi</td>
+                    <td>Salle B</td>
+                </tr>
+
+                <tr>
+                    <td>11:30</td>
+                    <td>Pause Café</td>
+                    <td>-</td>
+                    <td>Hall</td>
+                </tr>
+
+                <tr>
+                    <td>13:00</td>
+                    <td>Cloud Computing</td>
+                    <td>Samuel Mensah</td>
+                    <td>Salle C</td>
+                </tr>
+
+                <tr>
+                    <td>15:00</td>
+                    <td>Networking</td>
+                    <td>Équipe ACS</td>
+                    <td>Jardin</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- JOUR 2 -->
+
+    <div class="tab-content" id="day2">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>09:00</td>
+                    <td>Cybersécurité</td>
+                    <td>Fatou Ndiaye</td>
+                    <td>Salle A</td>
+                </tr>
+
+                <tr>
+                    <td>10:30</td>
+                    <td>Développement Web</td>
+                    <td>Ali Diop</td>
+                    <td>Salle B</td>
+                </tr>
+
+                <tr>
+                    <td>12:00</td>
+                    <td>Pause Déjeuner</td>
+                    <td>-</td>
+                    <td>Restaurant</td>
+                </tr>
+
+                <tr>
+                    <td>14:00</td>
+                    <td>DevOps</td>
+                    <td>Samuel Mensah</td>
+                    <td>Salle C</td>
+                </tr>
+
+                <tr>
+                    <td>16:00</td>
+                    <td>Table ronde</td>
+                    <td>Experts</td>
+                    <td>Salle A</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- JOUR 3 -->
+
+    <div class="tab-content" id="day3">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Heure</th>
+                    <th>Session</th>
+                    <th>Intervenant</th>
+                    <th>Salle</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>09:00</td>
+                    <td>Startups Africaines</td>
+                    <td>Grace N'Diaye</td>
+                    <td>Salle B</td>
+                </tr>
+
+                <tr>
+                    <td>10:30</td>
+                    <td>Innovation</td>
+                    <td>Jean Koffi</td>
+                    <td>Salle A</td>
+                </tr>
+
+                <tr>
+                    <td>12:00</td>
+                    <td>Pause</td>
+                    <td>-</td>
+                    <td>Hall</td>
+                </tr>
+
+                <tr>
+                    <td>14:00</td>
+                    <td>Investissement</td>
+                    <td>Amina Diallo</td>
+                    <td>Salle C</td>
+                </tr>
+
+                <tr>
+                    <td>16:00</td>
+                    <td>Cérémonie de clôture</td>
+                    <td>Organisation</td>
+                    <td>Salle A</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<!--==================== THÉMATIQUES ====================-->
+
+<section class="themes">
+
+    <h2>Les Thématiques</h2>
+
+    <div class="themes-grid">
+
+        <div class="theme-card hidden">
+            <div><i class="bi bi-robot"></i></div>
+            <h3>Intelligence Artificielle</h3>
+            <p>
+                Découvrez les dernières innovations en IA et en Machine Learning.
+            </p>
+        </div>
+
+        <div class="theme-card hidden">
+            <div><i class="bi bi-cloud"></i></div>
+            <h3>Cloud Computing</h3>
+            <p>
+                Explorez les solutions Cloud, DevOps et les infrastructures modernes.
+            </p>
+        </div>
+
+        <div class="theme-card hidden">
+            <div ><i class="bi bi-lock-fill"></i></div>
+            <h3>Cybersécurité</h3>
+            <p>
+                Protégez vos données grâce aux meilleures pratiques en sécurité numérique.
+            </p>
+        </div>
+
+        <div class="theme-card hidden">
+            <div class="icon"><i class="bi bi-bag-fill"></i></div>
+            <h3>Entrepreneuriat Tech</h3>
+            <p>
+                Rencontrez des startups, investisseurs et incubateurs africains.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+  <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 -->
+        <div class="footer-box">
+            <h3>AfriConnect Summit</h3>
+            <p>
+                La conférence tech panafricaine qui rassemble développeurs,
+                entrepreneurs et investisseurs pour construire l'Afrique de demain.
+            </p>
+        </div>
+
+        <!-- Colonne 2 -->
+        <div class="footer-box">
+            <h3>Liens rapides</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class="footer-box">
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                <a href="#"><i class="fab fa-x-insta"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © <span id="year"></span> AfriConnect Summit.
+        Tous droits réservés.
+    </p>
+
+</footer>
+
+<!-- Bouton retour en haut -->
+<button id="topBtn">↑</button>  
     <script src="js/main.js"></script>
 </body>
 </html>

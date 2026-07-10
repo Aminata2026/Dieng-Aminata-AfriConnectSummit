@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,323 @@
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="image/logo.jpeg" alt="logo">
+
+                <button>
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Programme</a></li>
+                        <li><a href="#">Intervenants</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <button id="darkModeToggle">
+                                <i class="bi bi bi-moon-stars-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--================ HERO INTERNE CONTACT ================-->
+
+    <section class="hero-contact">
+        <div class="hero-contact-content">
+            <h1>Contact</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>></span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!--================ FORMULAIRE D'INSCRIPTION ================-->
+
+    <section class="registration">
+        <div class="registration-container">
+            <!-- FORMULAIRE À GAUCHE -->
+            <div class="form-box">
+                <h2>Inscription</h2>
+                <form>
+
+                    <div class="input-group">
+                        <label>Nom complet</label>
+                        <input type="text" placeholder="Votre nom complet" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="exemple@email.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="+221 XX XXX XX XX" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Type de participation</label>
+
+                        <select required>
+
+                            <option value="">
+                                Choisir une participation
+                            </option>
+
+                            <option>
+                                Participant
+                            </option>
+
+                            <option>
+                                Intervenant
+                            </option>
+
+                            <option>
+                                Sponsor
+                            </option>
+
+                            <option>
+                                Investisseur
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Pays africain</label>
+
+                        <select required>
+
+                            <option value="" selected disabled>Choisir votre pays</option>
+                            <option value="Sénégal">Sénégal</option>
+                            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value=">Cameroun">Cameroun</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Maroc">Maroc</option>
+                            <option value="Algérie">Algérie</option>
+                            <option value="Tunisie">Tunisie</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Kenya">Kenya</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Message / Motivation</label>
+                        <textarea  placeholder="Expliquez votre motivation...">
+                    </textarea>
+
+                    </div>
+
+                    <button type="submit">
+                        Envoyer l'inscription
+                    </button>
+
+                    <p class="success">
+                        Inscription envoyée avec succès !
+                    </p>
+
+                </form>
+
+            </div>
+
+            <!-- INFORMATIONS À DROITE -->
+
+            <div class="info-box">
+
+                <h2>Pourquoi participer ?</h2>
+
+                <p>
+                    Rejoignez AfriConnect Summit 2026 et participez
+                    à la plus grande rencontre technologique panafricaine.
+                </p>
+
+                <div class="info-item">
+
+                    <i class="bi bi-geo-fill"></i>
+                    <span>
+                        Dakar, Sénégal
+                    </span>
+
+                </div>
 
 
+                <div class="info-item">
 
+                    <i class="bi bi-calendar"></i>
+                    <span>
+                        15 - 17 Octobre 2026
+                    </span>
 
+                </div>
 
-    
+                <div class="info-item">
+
+                    <i class="bi bi-people-fill"></i>
+                    <span>
+                        Plus de 1200 participants attendus
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="bi bi-airplane-fill"></i>
+                    <span>
+                        Networking, conférences et opportunités
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="FAQ">
+        <h2>Questions Frequentes</h2>
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="faq" id="Question1" class="accordion__input">
+                <label for="Question1" class="accordion__label">Comment participer a l'événement ?</label>
+                <div class="accordion-container">
+                    <p>Vous devez remplir le formulaire d'inscription en ligne.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="faq" id="Question2" class="accordion__input">
+                <label for="Question2" class="accordion__label">Quand aura lieu l'événement ?</label>
+                <div class="accordion-container">
+                    <p>L'événement aura lieu le 15 - 17 Octobre 2026. </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="faq" id="Question3" class="accordion__input">
+                <label for="Question3" class="accordion__label">Puis-je devenir sponsor ou partenaire ?</label>
+                <div class="accordion-container">
+                    <p>Bien sur ! cliquez sur type de participation . </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="faq" id="Question4" class="accordion__input">
+                <label for="Question4" class="accordion__label">Comment recevoir mon badge d'acces ?</label>
+                <div class="accordion-container">
+                    <p>Apres validation de votre inscription, vous recevrez un email de confirmation. Presentez-le jour J pour recuperer votre badge.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div>
+                <input type="checkbox" name="faq" id="Question5" class="accordion__input">
+                <label for="Question5" class="accordion__label">Y'aura t-il un replay de l'evenement ?</label>
+                <div class="accordion-container">
+                    <p>Oui les replays seront disponibles sur notre chaine youtube officielle 48h apres.</p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="carte">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.221584282361!2d-17.4674681!3d14.6934076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172535f29d5b3%3A0xc665809786438676!2sDakar!5e0!3m2!1sfr!2ssn!4v1620000000000!5m2!1sfr!2ssn">
+        </iframe>
+    </div>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Colonne 1 -->
+            <div class="footer-box">
+                <h3>AfriConnect Summit</h3>
+                <p>
+                    La conférence tech panafricaine qui rassemble développeurs,
+                    entrepreneurs et investisseurs pour construire l'Afrique de demain.
+                </p>
+            </div>
+
+            <!-- Colonne 2 -->
+            <div class="footer-box">
+                <h3>Liens rapides</h3>
+
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3 -->
+            <div class="footer-box">
+                <h3>Suivez-nous</h3>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © <span id="year"></span> AfriConnect Summit.
+            Tous droits réservés.
+        </p>
+
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="topBtn">↑</button>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>

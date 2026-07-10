@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,247 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="image/logo.jpeg" alt="logo">
+
+            <button>
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Intervenants</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <button id="darkModeToggle">
+                            <i class="bi bi bi-moon-stars-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--================ HERO INTERNE ================-->
+
+<section class="hero-intervenants">
+
+    <div class="hero-content">
+
+        <h1>Nos Intervenants</h1>
+
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a>
+            <span>></span>
+            <span>Intervenants</span>
+        </div>
+
+    </div>
+
+</section>
+<!--================ FILTRES =================-->
+
+<section class="speaker-section">
+
+    <h2>Nos Intervenants</h2>
+
+    <div class="filter-buttons">
+
+        <button class="filter-btn active" data-filter="all">Tous</button>
+
+        <button class="filter-btn" data-filter="ia">IA & Tech</button>
+
+        <button class="filter-btn" data-filter="business">Business</button>
+
+        <button class="filter-btn" data-filter="design">Design</button>
+
+        <button class="filter-btn" data-filter="data">Data</button>
+
+    </div>
+
+    <div class="speaker-grid">
+
+        <div class="speaker-card" data-category="ia">
+            <img src="image/Aminata.jpg" alt="Aminata Dieng">
+            <h3>Aminata Dieng</h3>
+            <p>Experte IA</p>
+        </div>
+
+        <div class="speaker-card" data-category="business">
+            <img src="image/fatimah.jpg" alt="Fatimah Diop">
+            <h3>Fatimah Diop</h3>
+            <p>Entrepreneur Tech</p>
+        </div>
+
+        <div class="speaker-card" data-category="design">
+            <img src="image/Ndeya.jpg" alt="Ndeya">
+            <h3>Ndeye Fatou Ka</h3>
+            <p>UX/UI Designer</p>
+        </div>
+
+        <div class="speaker-card" data-category="data">
+            <img src="image/Binta.jpg" alt="Binta Diop">
+            <h3>Binta Diop</h3>
+            <p>Data Scientist</p>
+        </div>
+
+        <div class="speaker-card" data-category="ia">
+            <img src="image/Moussa.jpg" alt="Moussa Sow">
+            <h3>Moussa Sow</h3>
+            <p>Développeur IA</p>
+        </div>
+
+        <div class="speaker-card" data-category="business">
+            <img src="image/samuel.jpg" alt="Titi">
+            <h3>Samuel Titi</h3>
+            <p>CEO Startup</p>
+        </div>
+
+    </div>
+    </section>
+<!--================ GRILLE INTERVENANTS ================-->
+
+<section class="all-speakers">
+
+    <h2>Nos Intervenants</h2>
+
+    <div class="speakers-grid">
+
+        <div class="speaker-card">
+            <img src="image/aminta.jpg" alt="Aminta Ndiaye">
+            <h3>Aminta Ndiaye</h3>
+            <p>Experte Intelligence Artificielle</p>
+            <span>🇸🇳 Sénégal</span>
+        </div>
 
 
+        <div class="speaker-card">
+            <img src="image/alioune.jpg" alt="Alioune Begera">
+            <h3>Alioune Begera</h3>
+            <p>Entrepreneur Tech</p>
+            <span>🇨🇮 Côte d'Ivoire</span>
+        </div>
 
 
+        <div class="speaker-card">
+            <img src="image/Ngone.jpg" alt="Ngone Diabi">
+            <h3>Ngone Diabi</h3>
+            <p>UX/UI Designer</p>
+            <span>🇲🇱 Mali</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/Diana.jpg" alt="Diana Titi">
+            <h3>Diana Titi</h3>
+            <p>Cloud Engineer</p>
+            <span>🇬🇭 Ghana</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/Moustapha.jpg" alt="Moustapha Dieng">
+            <h3>Moustapha Dieng</h3>
+            <p>Data Scientist</p>
+            <span>🇸🇳 Sénégal</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/Paul.jpg" alt="Paul Traoré">
+            <h3>Paul Traoré</h3>
+            <p>Cybersécurité</p>
+            <span>🇧🇫 Burkina Faso</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/Grace.jpg" alt="Grace Ndiaye">
+            <h3>Grace Ndiaye</h3>
+            <p>CEO Startup Africa</p>
+            <span>🇨🇲 Cameroun</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/Marieme.jpg" alt="Marieme Ba">
+            <h3>Marieme Ba</h3>
+            <p>Développeur Full Stack</p>
+            <span>🇸🇳 Sénégal</span>
+        </div>
+
+
+        <div class="speaker-card">
+            <img src="image/nadia.jpg" alt="Nadia Kouassi">
+            <h3>Nadia Kouassi</h3>
+            <p>Innovation Digitale</p>
+            <span>🇨🇮 Côte d'Ivoire</span>
+        </div>
+
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 -->
+        <div class="footer-box">
+            <h3>AfriConnect Summit</h3>
+            <p>
+                La conférence tech panafricaine qui rassemble développeurs,
+                entrepreneurs et investisseurs pour construire l'Afrique de demain.
+            </p>
+        </div>
+
+        <!-- Colonne 2 -->
+        <div class="footer-box">
+            <h3>Liens rapides</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class="footer-box">
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                <a href="#"><i class="fab fa-x-insta"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © <span id="year"></span> AfriConnect Summit.
+        Tous droits réservés.
+    </p>
+
+</footer>
+
+<!-- Bouton retour en haut -->
+<button id="topBtn">↑</button>
     
     <script src="js/main.js"></script>
 </body>

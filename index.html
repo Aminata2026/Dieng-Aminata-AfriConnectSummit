@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,324 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="image/logo.jpeg" alt="logo">
 
+            <button>
+                <i class="bi bi-list"></i>
+            </button>
 
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Intervenants</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <button id="darkModeToggle">
+                            <i class="bi bi bi-moon-stars-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-container">
 
+        <h1>AfriConnect Summit 2026</h1>
 
+        <p class="subtitle">
+            Dakar, Sénégal <br>
+            20 - 22 Novembre 2026
+        </p>
+
+        <div class="hero-btn">
+            <a href="contact.html" >Réserver ma place</a>
+            <a href="programme.html">Découvrir le programme</a>
+        </div>
+
+        <div class="conter">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Jours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Heures</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Secondes</small>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= CHIFFRES CLÉS ================= -->
+
+<section class="stats" id="stats">
+
+    <h2>Chiffres Clés</h2>
+
+    <div class="stats-grid">
+
+        <div class="card">
+            <h3 class="counter" data-target="1200">0</h3>
+            <p>Participants</p>
+        </div>
+
+        <div class="card">
+            <h3 class="counter" data-target="48">0</h3>
+            <p>Intervenants</p>
+        </div>
+
+        <div class="card">
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Jours</p>
+        </div>
+
+        <div class="card">
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Pays</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= POURQUOI PARTICIPER ================= -->
+
+<section class="prq-par" id="prq">
+    <div class="container">
+
+        <h2>Pourquoi participer ?</h2>
+        <p class="subtitle">
+            Rejoignez des experts, des entrepreneurs et des passionnés de technologie
+            pour vivre une expérience unique.
+        </p>
+
+        <div class="prq-container">
+
+            <div class="prq-card">
+                <div>
+                    <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <h3>Apprendre</h3>
+                <p>
+                    Assistez à des conférences inspirantes et découvrez les dernières
+                    tendances de l'intelligence artificielle, du cloud et du développement web.
+                </p>
+            </div>
+
+            <div class="prq-card">
+                <div>
+                    <i class="bi bi-people-fill"></i>
+                </div>
+                <h3>Développer son réseau</h3>
+                <p>
+                    Échangez avec des développeurs, des investisseurs et des
+                    entrepreneurs venus de toute l'Afrique.
+                </p>
+            </div>
+
+            <div class="prq-card">
+                <div>
+                    <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <h3>Saisir des opportunités</h3>
+                <p>
+                    Découvrez des offres d'emploi, des stages, des partenariats
+                    et des projets innovants.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= INTERVENANTS VEDETTES ================= -->
+
+<section class="intervenants-vedettes">
+
+    <h2>Intervenants Vedettes</h2>
+
+    <p class="titre-inter">
+        Découvrez quelques experts qui partageront leur expérience
+        lors de l'AfriConnect Summit 2026.
+    </p>
+
+    <div class="inter-grid">
+
+        <div class="inter-card">
+
+            <img src="image/Sophia.jpg" alt="Amina Diallo">
+
+            <div class="inter-info">
+                <h3>Sophia Dieng</h3>
+                <p>Experte en Intelligence Artificielle</p>
+                <span>🇸🇳 Sénégal</span>
+            </div>
+
+        </div>
+
+        <div class="inter-card">
+
+            <img src="image/Kofia.jpg" alt="Jean Kofia">
+
+            <div class="inter-info">
+                <h3>Kofia Makosso</h3>
+                <p>CEO de TechLab Africa</p>
+                <span>🇨🇮 Côte d'Ivoire</span>
+            </div>
+
+        </div>
+
+        <div class="inter-card">
+
+            <img src="image/ramatoulaye.jpg" alt="ramatoulaye">
+
+            <div class="inter-info">
+                <h3>Ramatoulaye Diabi</h3>
+                <p>Développeuse Full Stack</p>
+                <span>🇲🇱 Mali</span>
+            </div>
+
+        </div>
+
+        <div class="inter-card">
+
+            <img src="image/arona.jpg" alt="Arona Sisoh">
+
+            <div class="inter-info">
+                <h3>Arona Sisoh</h3>
+                <p>Cloud & DevOps Engineer</p>
+                <span>🇬🇭 Ghana</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="btn-container">
+        <a href="intervenants.html" class="btn-inter">
+            Voir tous les intervenants
+        </a>
+    </div>
+
+</section>
+<!-- ================= SPONSORS ================= -->
+
+<section class="sponsors">
+
+    <h2>Nos Sponsors</h2>
+
+    <p class="sponsor-titre">
+        Merci à nos partenaires qui soutiennent l'innovation et le développement
+        technologique en Afrique.
+    </p>
+
+    <div class="sponsor-container">
+
+        <!-- Sponsor OR -->
+        <article class="or-card ">
+            <h3><i class="bi bi-award-fill"></i>Sponsor Or</h3>
+
+            <img src="image/sponsor.jpeg" alt="Sponsor Or">
+
+            <p>Tech Africa Group</p>
+        </article>
+
+        <!-- Sponsor ARGENT -->
+        <article class="argent-card">
+            <h3><i class="bi bi-award-fill"></i>Sponsor Argent</h3>
+
+            <img src="image/sponsorargent.jpeg" alt="Sponsor Argent">
+
+            <p>Digital Sénégal</p>
+        </article>
+
+        <!-- Sponsor BRONZE -->
+        <article class="bronze-card">
+            <h3><i class="bi bi-award-fill"></i> Sponsor Bronze</h3>
+
+            <img src="image/sponsorbronze.jpeg" alt="Sponsor Bronze">
+
+            <p>Innov Startup Hub</p>
+        </article>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 -->
+        <div class="footer-box">
+            <h3>AfriConnect Summit</h3>
+            <p>
+                La conférence tech panafricaine qui rassemble développeurs,
+                entrepreneurs et investisseurs pour construire l'Afrique de demain.
+            </p>
+        </div>
+
+        <!-- Colonne 2 -->
+        <div class="footer-box">
+            <h3>Liens rapides</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class="footer-box">
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © <span id="year"></span> AfriConnect Summit.
+        Tous droits réservés.
+    </p>
+
+</footer>
+
+<!-- Bouton retour en haut -->
+<button id="topBtn">↑</button>
 
 
     
