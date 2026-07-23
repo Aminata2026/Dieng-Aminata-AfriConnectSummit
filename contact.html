@@ -15,18 +15,20 @@
     <header>
         <nav class="navbar">
             <div class="navbar-container">
-                <img src="image/logo.jpeg" alt="logo">
+                <div class="logo">
+                    <h2><img src="image/logo.jpeg" alt="logo">AfriConnect<span>Summit</span>2026</h2>
+                </div>
 
-                <button>
+                <button class="menu-btn">
                     <i class="bi bi-list"></i>
                 </button>
 
                 <div class="nav-link">
                     <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Programme</a></li>
-                        <li><a href="#">Intervenants</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li>
                             <button id="darkModeToggle">
                                 <i class="bi bi bi-moon-stars-fill"></i>
@@ -37,48 +39,50 @@
             </div>
         </nav>
     </header>
-
+    
     <!--================ HERO INTERNE CONTACT ================-->
-
+    <main>
     <section class="hero-contact">
         <div class="hero-contact-content">
-            <h1>Contact</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Accueil</a>
-                <span>></span>
-                <span>Contact</span>
-            </div>
+            <h1><a href="index.html">Contact</a></h1>
+            
         </div>
     </section>
 
     <!--================ FORMULAIRE D'INSCRIPTION ================-->
 
     <section class="registration">
+        
         <div class="registration-container">
+            
             <!-- FORMULAIRE À GAUCHE -->
             <div class="form-box">
                 <h2>Inscription</h2>
-                <form>
+                <form id="contactform">
 
                     <div class="input-group">
                         <label>Nom complet</label>
-                        <input type="text" placeholder="Votre nom complet" required>
+                        <input type="text" id="nom" placeholder="Votre nom complet" required>
+                        <small class="error"> </small>
                     </div>
 
                     <div class="input-group">
                         <label>Email</label>
-                        <input type="email" placeholder="exemple@email.com" required>
+                        <input type="email" id="email" placeholder="exemple@email.com" required>
+                        <small class="error"> </small>
                     </div>
 
                     <div class="input-group">
                         <label>Téléphone</label>
-                        <input type="tel" placeholder="+221 XX XXX XX XX" required>
+                        <input type="tel" id="telephone" placeholder="+221 XX XXX XX XX" required>
+                        <small class="error"> </small>
                     </div>
 
                     <div class="input-group">
                         <label>Type de participation</label>
+                        
 
-                        <select required>
+                        <select required id="participation">
 
                             <option value="">
                                 Choisir une participation
@@ -101,14 +105,14 @@
                             </option>
 
                         </select>
-
+                        <small class="error"></small>
                     </div>
 
                     <div class="input-group">
 
                         <label>Pays africain</label>
 
-                        <select required>
+                        <select required id="pays">
 
                             <option value="" selected disabled>Choisir votre pays</option>
                             <option value="Sénégal">Sénégal</option>
@@ -125,21 +129,21 @@
                             <option value="Kenya">Kenya</option>
 
                         </select>
-
+                        <small class="error"></small>
                     </div>
 
                     <div class="input-group">
                         <label>Message / Motivation</label>
-                        <textarea  placeholder="Expliquez votre motivation...">
+                        <textarea id="Message" placeholder="Expliquez votre motivation...">
                     </textarea>
-
+                    <small class="error"></small>
                     </div>
 
                     <button type="submit">
                         Envoyer l'inscription
                     </button>
 
-                    <p class="success">
+                    <p id="successmessage" class="success">
                         Inscription envoyée avec succès !
                     </p>
 
@@ -151,12 +155,7 @@
 
             <div class="info-box">
 
-                <h2>Pourquoi participer ?</h2>
-
-                <p>
-                    Rejoignez AfriConnect Summit 2026 et participez
-                    à la plus grande rencontre technologique panafricaine.
-                </p>
+               
 
                 <div class="info-item">
 
@@ -194,11 +193,15 @@
                     </span>
 
                 </div>
-
+                <div class="carte">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.221584282361!2d-17.4674681!3d14.6934076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172535f29d5b3%3A0xc665809786438676!2sDakar!5e0!3m2!1sfr!2ssn!4v1620000000000!5m2!1sfr!2ssn">
+                    </iframe>
+                </div>
             </div>
 
         </div>
-
+        
     </section>
 
     <!-- ================= FAQ ================= -->
@@ -264,11 +267,7 @@
 
         </div>
     </section>
-    <div class="carte">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.221584282361!2d-17.4674681!3d14.6934076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172535f29d5b3%3A0xc665809786438676!2sDakar!5e0!3m2!1sfr!2ssn!4v1620000000000!5m2!1sfr!2ssn">
-        </iframe>
-    </div>
+    
     <footer class="footer">
 
         <div class="footer-container">
@@ -320,12 +319,12 @@
             © <span id="year"></span> AfriConnect Summit.
             Tous droits réservés.
         </p>
-
+        <!-- Bouton retour en haut -->
+        <button id="topBtn">↑</button>
     </footer>
 
-    <!-- Bouton retour en haut -->
-    <button id="topBtn">↑</button>
-
+    
+    </main>
     <script src="js/main.js"></script>
 </body>
 
