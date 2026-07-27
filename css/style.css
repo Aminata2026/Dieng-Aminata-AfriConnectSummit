@@ -1154,7 +1154,7 @@ tbody tr:hover {
 }
 
 /* ============== Amination scrolle =================== */
-/* .hidden{
+.hidden{
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
@@ -1162,7 +1162,7 @@ tbody tr:hover {
 .hidden.active{
     opacity: 1;
     transform: translateY(0);
-} */
+}
 /*========================= ICONES ==========================*/
 
 .theme-card i {
@@ -1547,6 +1547,323 @@ button[type="submit"]:hover {
 .accordion__input:checked~.accordion-container {
     max-height: 200px;
 }
+/* ================= TABLETTE (max-width: 768px) ================= */
+@media (max-width: 768px) {
+
+    /* Navbar */
 
 
+    .menu-btn {
+        display: block;
+        /* on affiche le bouton hamburger */
+    }
 
+    .menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-link {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0b3d2e;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav-link.active {
+        max-height: 400px;
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+    .nav-link a {
+        margin-right: 0;
+    }
+
+    /* Le menu suit la navbar quand elle est "scrolled" */
+    #mainNav.scrolled .nav-link {
+        background: #0e3227;
+    }
+
+    body.dark-mode .nav-link {
+        background: #121212;
+    }
+
+
+    /* Hero */
+    .hero-container-accueil h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .hero-btn a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Compteur d'accueil */
+    .conter {
+        gap: 10px;
+    }
+
+    .time-box {
+        min-width: 70px;
+        padding: 10px 12px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .stats h2,
+    .prq-container h2,
+    .intervenants-vedettes h2,
+    .themes h2,
+    .programme h2,
+    .speaker-section h2,
+    .sponsors h2 {
+        font-size: 26px;
+        /* au lieu de 32-50px */
+    }
+
+    .card h3 {
+        font-size: 1.6rem;
+        /* au lieu de 2.8rem */
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .hero-container-accueil h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .inter-card img,
+    .speaker-card img {
+        height: 220px;
+        /* au lieu de 300-330px, trop grand pour tablette */
+    }
+    .registration-container {
+        flex-direction: column;
+    }
+    .carte{
+        
+        
+        position: relative;
+        justify-content: center;
+        display: flex;
+        margin-left: 27px;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 375px){
+    .hero-container-accueil h1 {
+        font-size: 6px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .hero-btn a {
+        display: block;
+        margin: 2px auto;
+        width: 20%;
+    }
+
+    /* Compteur - passage en 2 colonnes */
+    .conter {
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        min-width: 60px;
+        padding: 8px 10px;
+    }
+
+    .time-box span {
+        font-size: 18px;
+    }
+
+    .time-box small {
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        /* 1 seule carte par ligne */
+    }
+
+    .card {
+        padding: 25px 15px;
+    }
+
+    .prq-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .sponsor-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tableau programme : scroll horizontal */
+    .programme {
+        padding: 40px 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .hero-intervenants{
+        font-size: 7px;
+    }
+    .inter-grid {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+    .speaker-grid {
+        display: block;
+        grid-template-columns: 1fr;
+        /* 1 seule colonne */
+    }
+
+    .hero-contact-content h1 {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .form-box,
+    .info-box {
+        padding: 20px;
+    }
+
+    .stats h2,
+    .prq-container h2,
+    .intervenants-vedettes h2,
+    .themes h2,
+    .programme h2,
+    .speaker-section h2,
+    .sponsors h2 {
+        font-size: 20px;
+        /* encore plus petit sur mobile */
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .hero-container-accueil h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .inter-card img,
+    .speaker-card img {
+        height: 180px;
+    }
+
+    .theme-card i {
+        font-size: 35px;
+    }
+
+    .theme-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .theme-card p {
+        font-size: 13px;
+    }
+
+   .registration-container{
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .logo img {
+
+        width: 40px;
+
+        height: auto;
+
+    }
+
+    .logo h2{
+    font-size: 18px;
+    }
+
+    .logo img{
+        width: 35px;
+    }
+
+    .hero-contact {
+        min-height: 40vh;
+        padding-top: 70px;
+    }
+
+    .hero-contact-content h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero-contact-content h1 a {
+        font-size: inherit;
+    }
+}
+
+/* /* ================= GRAND ÉCRAN */
+@media (min-width: 1200px) {
+
+    .hero-container-accueil h1 {
+        font-size: 70px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* les 4 cartes bien alignées */
+    }
+
+    .speaker-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* garde 3 colonnes, mais avec plus d'espace */
+        gap: 40px;
+    }
+
+    .sponsor-container {
+        gap: 40px;
+    }
+
+    .registration-container {
+        gap: 60px;
+    }
+}

@@ -31,4 +31,46 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
      });
-    
+// Aminiion au scrolle POURQUOI PARTICIPER
+     const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+
+    reveals.forEach(item=>{
+
+        const windowHeight = window.innerHeight;
+
+        const top = item.getBoundingClientRect().top;
+
+        if(top < windowHeight-120){
+
+            item.classList.add("active");
+        }
+    });
+});
+// Aminiion au scrolle THEME
+    const hiddens = document.querySelectorAll(".hidden");
+
+window.addEventListener("scroll",()=>{
+
+    hiddens.forEach(item=>{
+
+        const windowHeight = window.innerHeight;
+
+        const top = item.getBoundingClientRect().top;
+
+        if(top < windowHeight-120){
+
+            item.classList.add("active");
+        }
+    });
+});
+// BOUTON RETOUR EN HAUT (Smooth Scroll) 
+    const btn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
