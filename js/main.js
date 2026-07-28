@@ -147,3 +147,126 @@ document.querySelectorAll(".nav-link a").forEach(link => {
     });
 });
 
+// VALIDATION FORMULAIRE
+const form = document.getElementById("contactform");
+
+if (form) {
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let valide = true;
+
+        function erreur(id, Message){
+            let champ = document.getElementById(id);
+            let small = champ.nextElementSibling;
+            champ.style.border = "2px solid red";
+            small.textContent = Message;
+            valide = false;
+        }
+
+        function ok(id){
+            let champ = document.getElementById(id);
+            champ.style.border = "2px solid green";
+            champ.nextElementSibling.textContent = "";
+        }
+
+        if(document.getElementById("nom").value.trim() === ""){
+            erreur("nom", "Nom obligatoire");
+        } else {
+            ok("nom");
+        }
+
+        let email = document.getElementById("email").value;
+        let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!regex.test(email)){
+            erreur("email", "Email invalide");
+        } else {
+            ok("email");
+        }
+
+        let tel = document.getElementById("telephone").value;
+        if(tel.length < 8){
+            erreur("telephone", "Minimum 8 chiffres");
+        } else {
+            ok("telephone");
+        }
+
+        let participation = document.getElementById("participation");
+        if(participation.value === ""){
+            erreur("participation", "Choisir une participation");
+        } else {
+            ok("participation");
+        }
+
+        let pays = document.getElementById("pays");
+        if(pays.value === ""){
+            erreur("pays", "Choisir un pays");
+        } else {
+            ok("pays");
+        }
+
+        let messageField = document.getElementById("Message");
+        if(messageField.value.trim().length < 20){
+            erreur("Message", "Minimum 20 caractères");
+        } else {
+            ok("Message");
+        }
+
+        if(valide){
+            document.querySelector(".success").style.display = "block";
+            form.reset();
+
+            setTimeout(() => {
+                document.querySelector(".success").style.display = "none";
+            }, 4000);
+        }
+    });
+}
+
+// FILTRE INTERVENANTS
+const filterBtns = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".speaker-card");
+
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+            if (filter === "all" || card.dataset.category === filter) {
+                card.classList.remove("hide");
+            } else {
+                card.classList.add("hide");
+            }
+        });
+    });
+});
+
+
+// FILTRAGE TABLEAU PROGRAMME
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.day)
+            .classList.add("active");
+
+    });
+
+});
+// Année dynamique dans le footer
+const yearEl = document.getElementById('year');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
