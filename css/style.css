@@ -1344,7 +1344,6 @@ tbody tr:hover {
     padding-top: 70px;
     background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
         url("../image/contact.jpg") center/cover;
-    /* height: 50vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1468,7 +1467,6 @@ button[type="submit"]:hover {
     color: green;
     text-align: center;
     display: none;
-    /* caché par défaut */
 }
 
 .info-box {
@@ -1477,7 +1475,7 @@ button[type="submit"]:hover {
     border-radius: 15px;
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height:440px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 }
 
@@ -1497,7 +1495,6 @@ button[type="submit"]:hover {
 }
 
 .carte {
-    margin-left: 40px;
     justify-content: center;
 }
 
@@ -1547,17 +1544,41 @@ button[type="submit"]:hover {
 .accordion__input:checked~.accordion-container {
     max-height: 200px;
 }
-/* ================= TABLETTE (max-width: 768px) ================= */
-@media (max-width: 768px) {
 
-    /* Navbar */
+/* ==========================================================
+   GRAND ÉCRAN (min-width: 1200px)
+   ========================================================== */
+@media (min-width: 1200px) {
 
-
-    .menu-btn {
-        display: block;
-        /* on affiche le bouton hamburger */
+    .hero-container-accueil h1 {
+        font-size: 70px;
     }
 
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* les 4 cartes bien alignées */
+    }
+
+    .speaker-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .sponsor-container {
+        gap: 40px;
+    }
+
+    .registration-container {
+        gap: 60px;
+    }
+}
+
+/* ==========================================================
+   TABLETTE (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+
+    /* Navbar / menu hamburger */
     .menu-btn {
         display: block;
         z-index: 1001;
@@ -1589,7 +1610,6 @@ button[type="submit"]:hover {
         margin-right: 0;
     }
 
-    /* Le menu suit la navbar quand elle est "scrolled" */
     #mainNav.scrolled .nav-link {
         background: #0e3227;
     }
@@ -1598,14 +1618,13 @@ button[type="submit"]:hover {
         background: #121212;
     }
 
-
     /* Hero */
     .hero-container-accueil h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .hero-btn a {
@@ -1627,6 +1646,7 @@ button[type="submit"]:hover {
         font-size: 22px;
     }
 
+    /* Titres de sections */
     .stats h2,
     .prq-container h2,
     .intervenants-vedettes h2,
@@ -1635,37 +1655,28 @@ button[type="submit"]:hover {
     .speaker-section h2,
     .sponsors h2 {
         font-size: 26px;
-        /* au lieu de 32-50px */
     }
 
     .card h3 {
         font-size: 1.6rem;
-        /* au lieu de 2.8rem */
     }
 
     .card p {
         font-size: 0.95rem;
     }
 
-    .hero-container-accueil h1 {
-        font-size: 30px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
+    /* Images */
     .inter-card img,
     .speaker-card img {
         height: 220px;
-        /* au lieu de 300-330px, trop grand pour tablette */
     }
+
+    /* Inscription */
     .registration-container {
         flex-direction: column;
     }
-    .carte{
-        
-        
+
+    .carte {
         position: relative;
         justify-content: center;
         display: flex;
@@ -1674,196 +1685,390 @@ button[type="submit"]:hover {
     }
 }
 
-@media(max-width: 375px){
+/* ==========================================================
+   MOBILE (max-width: 390px) — iPhone SE / iPhone standard
+   Seuil élargi à 390px (au lieu de 375px pile) pour couvrir
+   toutes les variations de mesure entre navigateurs/appareils
+   ========================================================== */
+@media screen and (max-width: 390px) {
+
+    /* ================= NAVBAR ================= */
+    .navbar-container {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .navbar-container img {
+        width: 35px;
+        height: 22px;
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .nav-link a {
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* ================= HERO ACCUEIL ================= */
     .hero-container-accueil h1 {
-        font-size: 6px;
+        font-size: 30px;
+        margin-bottom: 15px;
     }
 
     .subtitle {
-        font-size: 15px;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
-    .hero-btn a {
-        display: block;
-        margin: 2px auto;
-        width: 20%;
+    /* Désactive le zoom animé sur mobile : évite les bandes vides
+       car l'animation force background-size en % (100/110%) qui
+       écrase le "cover" et ne remplit plus toute la hauteur */
+    .hero,
+    .hero-interne,
+    .hero-intervenants,
+    .hero-contact {
+        animation: none;
+        background-size: cover !important;
     }
 
-    /* Compteur - passage en 2 colonnes */
-    .conter {
-        flex-wrap: wrap;
-    }
-
-    .time-box {
-        min-width: 60px;
-        padding: 8px 10px;
-    }
-
-    .time-box span {
-        font-size: 18px;
-    }
-
-    .time-box small {
-        font-size: 12px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-        /* 1 seule carte par ligne */
-    }
-
-    .card {
-        padding: 25px 15px;
-    }
-
-    .prq-container {
+    .hero-btn {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    
+    .hero-btn a {
+        display: block;
+        width: 100%;
+        max-width: 180px;
+        padding: 10px 16px;
+        margin: 6px auto;
+        font-size: 14px;
+    }
+
+    .conter {
+        gap: 10px;
+    }
+
+    .time-box {
+        padding: 10px 12px;
+        min-width: 65px;
+    }
+
+    .time-box span {
+        font-size: 20px;
+    }
+
+    .time-box small {
+        font-size: 11px;
+    }
+
+    /* ================= CHIFFRES CLES ================= */
+    .stats {
+        padding: 40px 15px;
+    }
+
+    .stats h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card h3 {
+        font-size: 2rem;
+    }
+
+    /* ================= POURQUOI PARTICIPER ================= */
+    .prq-par {
+        padding: 40px 15px;
+    }
+
+    .prq-container h2 {
+        font-size: 26px;
+    }
+
+    .prq-container {
+        gap: 15px;
+    }
+
+    .prq-card {
+        width: 100%;
+    }
+
+    /* ================= INTERVENANTS VEDETTES ================= */
+    .intervenants-vedettes {
+        padding: 25px 15px;
+    }
+
+    .intervenants-vedettes h2 {
+        font-size: 26px;
+    }
+
+    .titre-inter {
+        font-size: 16px;
+    }
+
+    .inter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-container a {
+        padding: 12px 20px;
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    /* ================= SPONSORS ================= */
+    .sponsors {
+        padding: 50px 5%;
+    }
+
+    .sponsors h2 {
+        font-size: 1.8rem;
+    }
 
     .sponsor-container {
         grid-template-columns: 1fr;
     }
 
-    /* Tableau programme : scroll horizontal */
+    .or-card,
+    .argent-card,
+    .bronze-card {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+        padding: 40px 6% 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #topBtn {
+        right: 15px;
+        bottom: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    /* ================= PAGE PROGRAMME ================= */
     .programme {
-        padding: 40px 15px;
+        padding: 50px 5%;
     }
 
-    table {
+    .programme h2 {
+        font-size: 26px;
+    }
+
+    .hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .tabs {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* Tableau horaires : transformé en cartes empilées sur mobile
+       (plus lisible qu'un scroll horizontal sur petit écran) */
+    .programme table,
+    .programme thead,
+    .programme tbody,
+    .programme th,
+    .programme td,
+    .programme tr {
         display: block;
-        overflow-x: auto;
+    }
+
+    .programme thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .programme tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .programme td {
+        position: relative;
+        padding: 10px 10px 10px 45%;
+        font-size: 14px;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+    }
+
+    .programme td:last-child {
+        border-bottom: none;
+    }
+
+    .programme td::before {
+        position: absolute;
+        left: 10px;
+        width: 40%;
         white-space: nowrap;
-    }
-    .hero-intervenants{
-        font-size: 7px;
-    }
-    .inter-grid {
-        display: block;
-        grid-template-columns: 1fr;
-    }
-    .speaker-grid {
-        display: block;
-        grid-template-columns: 1fr;
-        /* 1 seule colonne */
+        text-align: left;
+        font-weight: 600;
+        color: #0b3d2e;
     }
 
+    .programme td:nth-of-type(1)::before {
+        content: "Heure";
+    }
+
+    .programme td:nth-of-type(2)::before {
+        content: "Session";
+    }
+
+    .programme td:nth-of-type(3)::before {
+        content: "Intervenant";
+    }
+
+    .programme td:nth-of-type(4)::before {
+        content: "Salle";
+    }
+
+    /* ================= THEMATIQUES ================= */
+    .themes {
+        padding: 50px 5%;
+    }
+
+    .themes h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .themes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .theme-card i {
+        font-size: 40px;
+    }
+
+    .theme-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* ================= HERO INTERVENANTS ================= */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 a {
+        font-size: 2.5rem;
+    }
+
+    /* ================= SECTION INTERVENANTS ================= */
+    .speaker-section {
+        padding: 50px 5%;
+    }
+
+    .speaker-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    .speaker-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .speaker-card img {
+        height: 260px;
+    }
+
+    /* ================= HERO CONTACT ================= */
     .hero-contact-content h1 {
-        height: 40vh;
-        min-height: 280px;
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+    }
+
+    /* ================= FORMULAIRE INSCRIPTION ================= */
+    .registration {
+        padding: 50px 5%;
+    }
+
+    .registration-container {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .form-box,
     .info-box {
+        max-width: 100%;
         padding: 20px;
     }
 
-    .stats h2,
-    .prq-container h2,
-    .intervenants-vedettes h2,
-    .themes h2,
-    .programme h2,
-    .speaker-section h2,
-    .sponsors h2 {
-        font-size: 20px;
-        /* encore plus petit sur mobile */
+    .form-box h2 {
+        font-size: 1.8rem;
     }
 
-    .card h3 {
-        font-size: 1.3rem;
+    .info-item {
+        margin-left: 0;
+        text-align: left;
     }
 
-    .card p {
-        font-size: 0.85rem;
+    .carte {
+        margin-left: 0;
     }
 
-    .hero-container-accueil h1 {
-        font-size: 22px;
+    /* ================= FAQ ================= */
+    .FAQ {
+        padding: 40px 5%;
     }
 
-    .subtitle {
+    .FAQ h2 {
+        font-size: 1.8rem;
+    }
+
+    .accordion__label {
+        padding: 14px;
         font-size: 14px;
-    }
-
-    .inter-card img,
-    .speaker-card img {
-        height: 180px;
-    }
-
-    .theme-card i {
-        font-size: 35px;
-    }
-
-    .theme-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .theme-card p {
-        font-size: 13px;
-    }
-
-   .registration-container{
-    flex-direction: column;
-    align-items: center;
-    }
-
-    .logo img {
-
-        width: 40px;
-
-        height: auto;
-
-    }
-
-    .logo h2{
-    font-size: 18px;
-    }
-
-    .logo img{
-        width: 35px;
-    }
-
-    .hero-contact {
-        min-height: 40vh;
-        padding-top: 70px;
-    }
-
-    .hero-contact-content h1 {
-        font-size: 2.5rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    .hero-contact-content h1 a {
-        font-size: inherit;
-    }
-}
-
-/* /* ================= GRAND ÉCRAN */
-@media (min-width: 1200px) {
-
-    .hero-container-accueil h1 {
-        font-size: 70px;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-        /* les 4 cartes bien alignées */
-    }
-
-    .speaker-grid {
-        grid-template-columns: repeat(3, 1fr);
-        /* garde 3 colonnes, mais avec plus d'espace */
-        gap: 40px;
-    }
-
-    .sponsor-container {
-        gap: 40px;
-    }
-
-    .registration-container {
-        gap: 60px;
     }
 }
